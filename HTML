@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="WiMusica — Discover music that feels like you.">
+  <title>WiMusica — Feel The Music</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="bg-orb orb-one"></div>
+  <div class="bg-orb orb-two"></div>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+
+    <a href="#" class="logo">
+      <span class="logo-mark">W</span>
+      <span>Wi<span>Musica</span></span>
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#discover">Discover</a>
+      <a href="#genres">Genres</a>
+      <a href="#artists">Artists</a>
+      <a href="#about">About</a>
+    </nav>
+
+    <div class="nav-actions">
+
+      <button class="search-btn" id="searchBtn">
+        ⌕
+      </button>
+
+      <button class="login-btn">
+        Log in
+      </button>
+
+      <button class="menu-btn" id="menuBtn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+
+  </header>
+
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" id="discover">
+
+      <div class="hero-content">
+
+        <div class="eyebrow">
+          <span class="pulse"></span>
+          YOUR SOUND. YOUR WORLD.
+        </div>
+
+        <h1>
+          Feel the music.<br>
+          <span>Live the moment.</span>
+        </h1>
+
+        <p class="hero-text">
+          Discover new sounds, explore inspiring artists,
+          and find the soundtrack for every moment with WiMusica.
+        </p>
+
+        <div class="hero-actions">
+
+          <a href="#featured" class="primary-btn">
+            Start listening
+            <span>→</span>
+          </a>
+
+          <a href="#genres" class="secondary-btn">
+            Explore genres
+          </a>
+
+        </div>
+
+        <div class="hero-stats">
+
+          <div>
+            <strong>50K+</strong>
+            <span>Tracks</span>
+          </div>
+
+          <div class="stat-line"></div>
+
+          <div>
+            <strong>8K+</strong>
+            <span>Artists</span>
+          </div>
+
+          <div class="stat-line"></div>
+
+          <div>
+            <strong>120+</strong>
+            <span>Genres</span>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- MUSIC VISUAL -->
+      <div class="hero-visual">
+
+        <div class="visual-glow"></div>
+
+        <div class="vinyl-card">
+
+          <div class="album-art">
+
+            <div class="album-sun"></div>
+
+            <div class="album-mountain mountain-back"></div>
+            <div class="album-mountain mountain-front"></div>
+
+            <div class="album-label">
+              W
+            </div>
+
+          </div>
+
+          <div class="vinyl">
+
+            <div class="vinyl-center"></div>
+
+          </div>
+
+        </div>
+
+
+        <!-- NOW PLAYING -->
+        <div class="floating-card now-playing">
+
+          <div class="mini-cover"></div>
+
+          <div class="track-info">
+
+            <span>NOW PLAYING</span>
+
+            <strong>
+              Midnight Dreams
+            </strong>
+
+            <small>
+              WiMusica Originals
+            </small>
+
+          </div>
+
+          <button class="play-small" id="playBtn">
+            ▶
+          </button>
+
+        </div>
+
+
+        <div class="floating-card music-note note-one">
+          ♪
+        </div>
+
+        <div class="floating-card music-note note-two">
+          ♫
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- FEATURED -->
+    <section class="section featured" id="featured">
+
+      <div class="section-heading">
+
+        <div>
+
+          <span class="section-kicker">
+            CURATED FOR YOU
+          </span>
+
+          <h2>
+            Made for your mood.
+          </h2>
+
+        </div>
+
+        <a href="#" class="view-all">
+          View all <span>→</span>
+        </a>
+
+      </div>
+
+
+      <div class="music-grid">
+
+
+        <article class="music-card">
+
+          <div class="card-cover cover-one">
+
+            <span class="cover-symbol">
+              ✦
+            </span>
+
+            <button class="card-play">
+              ▶
+            </button>
+
+          </div>
+
+          <div class="card-info">
+
+            <h3>
+              Late Night Vibes
+            </h3>
+
+            <p>
+              Chill · Dreamy · Lo-fi
+            </p>
+
+          </div>
+
+        </article>
+
+
+
+        <article class="music-card">
+
+          <div class="card-cover cover-two">
+
+            <span class="cover-symbol">
+              ◒
+            </span>
+
+            <button class="card-play">
+              ▶
+            </button>
+
+          </div>
+
+          <div class="card-info">
+
+            <h3>
+              Blue Hour
+            </h3>
+
+            <p>
+              Indie · Alternative · Soul
+            </p>
+
+          </div>
+
+        </article>
+
+
+
+        <article class="music-card">
+
+          <div class="card-cover cover-three">
+
+            <span class="cover-symbol">
+              ∞
+            </span>
+
+            <button class="card-play">
+              ▶
+            </button>
+
+          </div>
+
+          <div class="card-info">
+
+            <h3>
+              Deep Focus
+            </h3>
+
+            <p>
+              Ambient · Electronic · Focus
+            </p>
+
+          </div>
+
+        </article>
+
+
+
+        <article class="music-card">
+
+          <div class="card-cover cover-four">
+
+            <span class="cover-symbol">
+              ✺
+            </span>
+
+            <button class="card-play">
+              ▶
+            </button>
+
+          </div>
+
+          <div class="card-info">
+
+            <h3>
+              Sunday Morning
+            </h3>
+
+            <p>
+              Acoustic · Pop · Easy
+            </p>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- GENRES -->
+    <section class="genres-section" id="genres">
+
+      <div class="genre-copy">
+
+        <span class="section-kicker">
+          FIND YOUR SOUND
+        </span>
+
+        <h2>
+          One world.<br>
+          <span>Endless sounds.</span>
+        </h2>
+
+        <p>
+          From quiet acoustic sessions to energetic electronic beats,
+          there is always something waiting to become your next favorite.
+        </p>
+
+        <a href="#" class="text-link">
+          Explore all genres ↗
+        </a>
+
+      </div>
+
+
+      <div class="genre-cloud">
+
+        <button class="genre-pill pill-large">
+          Pop
+        </button>
+
+        <button class="genre-pill">
+          R&B
+        </button>
+
+        <button class="genre-pill">
+          Indie
+        </button>
+
+        <button class="genre-pill pill-accent">
+          Lo-fi
+        </button>
+
+        <button class="genre-pill">
+          Jazz
+        </button>
+
+        <button class="genre-pill pill-large">
+          Hip-Hop
+        </button>
+
+        <button class="genre-pill">
+          Rock
+        </button>
+
+        <button class="genre-pill">
+          Electronic
+        </button>
+
+        <button class="genre-pill">
+          Acoustic
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- ARTISTS -->
+    <section class="artist-section" id="artists">
+
+      <div class="section-heading">
+
+        <div>
+
+          <span class="section-kicker">
+            MEET THE ARTISTS
+          </span>
+
+          <h2>
+            Sounds worth knowing.
+          </h2>
+
+        </div>
+
+      </div>
+
+
+      <div class="artist-row">
+
+
+        <div class="artist">
+
+          <div class="artist-avatar avatar-one">
+            L
+          </div>
+
+          <strong>
+            Luna
+          </strong>
+
+          <span>
+            Indie Pop
+          </span>
+
+        </div>
+
+
+
+        <div class="artist">
+
+          <div class="artist-avatar avatar-two">
+            A
+          </div>
+
+          <strong>
+            Arlo
+          </strong>
+
+          <span>
+            Alternative
+          </span>
+
+        </div>
+
+
+
+        <div class="artist">
+
+          <div class="artist-avatar avatar-three">
+            N
+          </div>
+
+          <strong>
+            Naya
+          </strong>
+
+          <span>
+            R&B Soul
+          </span>
+
+        </div>
+
+
+
+        <div class="artist">
+
+          <div class="artist-avatar avatar-four">
+            K
+          </div>
+
+          <strong>
+            Kairo
+          </strong>
+
+          <span>
+            Electronic
+          </span>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CTA -->
+    <section class="cta-section" id="about">
+
+      <div class="cta-glow"></div>
+
+      <span class="section-kicker">
+        THE WORLD OF MUSIC
+      </span>
+
+      <h2>
+        Your next favorite song<br>
+        is waiting.
+      </h2>
+
+      <p>
+        Start exploring music that feels like you.
+      </p>
+
+      <a href="#discover" class="primary-btn">
+        Explore WiMusica
+        <span>→</span>
+      </a>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer class="footer">
+
+    <a href="#" class="logo">
+
+      <span class="logo-mark">
+        W
+      </span>
+
+      <span>
+        Wi<span>Musica</span>
+      </span>
+
+    </a>
+
+    <p>
+      © 2026 WiMusica. Made for music lovers.
+    </p>
+
+    <div class="footer-links">
+      <a href="#">Instagram</a>
+      <a href="#">TikTok</a>
+      <a href="#">Contact</a>
+    </div>
+
+  </footer>
+
+
+  <!-- SEARCH -->
+  <div class="search-overlay" id="searchOverlay">
+
+    <button class="close-search" id="closeSearch">
+      ×
+    </button>
+
+    <div class="search-box">
+
+      <span>⌕</span>
+
+      <input
+        type="text"
+        placeholder="Search songs, artists, genres..."
+      >
+
+    </div>
+
+  </div>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
