@@ -1,190 +1,75 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Wimusikal — ruang modern untuk menikmati, menemukan, dan merayakan musik.">
-  <title>Wimusikal — Feel the Music</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Wimusikal — ruang modern untuk menikmati, menemukan, dan merayakan musik.">
+<title>Wimusikal — Feel the Music</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="ambient ambient-one"></div>
-  <div class="ambient ambient-two"></div>
+<header class="navbar">
+<a class="brand" href="#home"><span class="brand-mark">W</span><span>Wimusikal</span></a>
+<nav class="nav-links"><a href="#home">Home</a><a href="#discover">Discover</a><a href="#genres">Genres</a><a href="#about">About</a></nav>
+<a class="nav-cta" href="#discover">Explore Music <span>↗</span></a>
+</header>
 
-  <header class="navbar">
-    <a class="brand" href="#home" aria-label="Wimusikal home">
-      <span class="brand-mark">W</span>
-      <span>Wimusikal</span>
-    </a>
+<main>
+<section class="hero" id="home">
+<div class="hero-copy reveal">
+<div class="eyebrow"><span></span> YOUR DAILY MUSIC SPACE</div>
+<h1>Where <em>music</em><br>feels like home.</h1>
+<p class="hero-text">Temukan suara baru, mood favorit, dan cerita di balik setiap nada. Wimusikal hadir untuk kamu yang melihat musik lebih dari sekadar suara.</p>
+<div class="hero-actions"><a class="primary-btn magnetic" href="#discover">Mulai Menjelajah <span>→</span></a><a class="text-btn" href="#about">Kenapa Wimusikal? <span>↓</span></a></div>
+<div class="mini-stats"><div><strong>120K+</strong><span>Tracks</span></div><div><strong>950+</strong><span>Artists</span></div><div><strong>40+</strong><span>Genres</span></div></div>
+</div>
+<div class="hero-visual reveal">
+<div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+<div class="music-card">
+<div class="card-top"><span>NOW PLAYING</span><button>•••</button></div>
+<div class="album-art stock-hero"><div class="album-glow"></div><div class="vinyl"></div><div class="album-label">WI<br><small>MUSIKAL</small></div></div>
+<div class="track-info"><div><h3>Midnight Bloom</h3><p>Wimusikal Sessions</p></div><span class="heart">♡</span></div>
+<div class="progress"><span></span></div><div class="time-row"><span>02:18</span><span>03:42</span></div>
+<div class="player-controls"><button>⤨</button><button>◀◀</button><button class="play-btn">▶</button><button>▶▶</button><button>↻</button></div>
+</div>
+</div>
+</section>
 
-    <nav class="nav-links">
-      <a href="#home">Home</a>
-      <a href="#discover">Discover</a>
-      <a href="#genres">Genres</a>
-      <a href="#about">About</a>
-    </nav>
+<section class="marquee"><div class="marquee-track"><span>DISCOVER</span><b>✦</b><span>LISTEN</span><b>✦</b><span>FEEL</span><b>✦</b><span>DISCOVER</span><b>✦</b><span>LISTEN</span><b>✦</b><span>FEEL</span><b>✦</b></div></section>
 
-    <a class="nav-cta" href="#discover">Explore Music <span>↗</span></a>
-  </header>
+<section class="section" id="discover">
+<div class="section-heading reveal"><div><p class="section-kicker">CURATED FOR YOU</p><h2>Sounds worth<br><span>pressing play on.</span></h2></div><p class="section-description">Pilihan musik yang menemani berbagai versi dirimu—dari pagi yang tenang sampai malam yang penuh cerita.</p></div>
+<div class="playlist-grid">
+<article class="playlist-card reveal"><div class="art stock-morning"><span>01</span></div><div class="playlist-meta"><div><p>MOOD</p><h3>Soft Morning</h3></div><button>▶</button></div><p class="muted">Indie pop · Acoustic · Dreamy</p></article>
+<article class="playlist-card reveal"><div class="art stock-night"><span>02</span></div><div class="playlist-meta"><div><p>MOOD</p><h3>Late Night</h3></div><button>▶</button></div><p class="muted">R&B · Lo-fi · Alternative</p></article>
+<article class="playlist-card reveal"><div class="art stock-energy"><span>03</span></div><div class="playlist-meta"><div><p>ENERGY</p><h3>Good Energy</h3></div><button>▶</button></div><p class="muted">Pop · Dance · Feel good</p></article>
+</div>
+</section>
 
-  <main>
-    <section class="hero" id="home">
-      <div class="hero-copy reveal">
-        <div class="eyebrow"><span></span> YOUR DAILY MUSIC SPACE</div>
-        <h1>Where <em>music</em><br>feels like home.</h1>
-        <p class="hero-text">
-          Temukan suara baru, mood favorit, dan cerita di balik setiap nada.
-          Wimusikal hadir untuk kamu yang melihat musik lebih dari sekadar suara.
-        </p>
+<section class="section" id="genres">
+<div class="section-heading reveal"><div><p class="section-kicker">EXPLORE YOUR SOUND</p><h2>One world,<br><span>many rhythms.</span></h2></div></div>
+<div class="genre-list">
+<a href="#" class="genre-pill reveal"><span>01</span> Pop <i>↗</i></a>
+<a href="#" class="genre-pill reveal"><span>02</span> Indie <i>↗</i></a>
+<a href="#" class="genre-pill reveal"><span>03</span> R&B <i>↗</i></a>
+<a href="#" class="genre-pill reveal"><span>04</span> Jazz <i>↗</i></a>
+<a href="#" class="genre-pill reveal"><span>05</span> Classical <i>↗</i></a>
+<a href="#" class="genre-pill reveal"><span>06</span> Electronic <i>↗</i></a>
+</div>
+</section>
 
-        <div class="hero-actions">
-          <a class="primary-btn" href="#discover">Mulai Menjelajah <span>→</span></a>
-          <a class="text-btn" href="#about">Kenapa Wimusikal? <span>↓</span></a>
-        </div>
+<section class="about-section" id="about">
+<div class="about-art reveal"><div class="sound-ring"></div><div class="about-letter">W</div><div class="floating-note note-one">♪</div><div class="floating-note note-two">♫</div></div>
+<div class="about-copy reveal"><p class="section-kicker">THE WIMUSIKAL IDEA</p><h2>Musik bukan cuma<br><span>untuk didengar.</span></h2><p>Musik bisa menjadi memori, energi, tempat pulang, bahkan cara kita memahami diri sendiri. Wimusikal dibuat sebagai ruang kecil untuk merayakan semua hal itu.</p><a class="primary-btn magnetic" href="#discover">Find Your Sound <span>→</span></a></div>
+</section>
 
-        <div class="mini-stats">
-          <div><strong>120K+</strong><span>Tracks</span></div>
-          <div><strong>950+</strong><span>Artists</span></div>
-          <div><strong>40+</strong><span>Genres</span></div>
-        </div>
-      </div>
+<section class="cta-section reveal"><p class="section-kicker">YOUR NEXT FAVORITE SONG IS WAITING</p><h2>Turn the volume<br><span>up on life.</span></h2><a class="primary-btn magnetic" href="#home">Explore Wimusikal <span>↗</span></a></section>
+</main>
 
-      <div class="hero-visual reveal delay">
-        <div class="orbit orbit-a"></div>
-        <div class="orbit orbit-b"></div>
-        <div class="music-card">
-          <div class="card-top">
-            <span>NOW PLAYING</span>
-            <button class="more-btn" aria-label="More options">•••</button>
-          </div>
-          <div class="album-art">
-            <div class="album-glow"></div>
-            <div class="vinyl"></div>
-            <div class="album-label">WI<br><small>MUSIKAL</small></div>
-          </div>
-          <div class="track-info">
-            <div>
-              <h3>Midnight Bloom</h3>
-              <p>Wimusikal Sessions</p>
-            </div>
-            <span class="heart">♡</span>
-          </div>
-          <div class="progress"><span></span></div>
-          <div class="time-row"><span>02:18</span><span>03:42</span></div>
-          <div class="player-controls">
-            <button aria-label="Shuffle">⤨</button>
-            <button aria-label="Previous">◀◀</button>
-            <button class="play-btn" id="playButton" aria-label="Play">▶</button>
-            <button aria-label="Next">▶▶</button>
-            <button aria-label="Repeat">↻</button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="marquee">
-      <div class="marquee-track">
-        <span>DISCOVER</span><b>✦</b><span>LISTEN</span><b>✦</b><span>FEEL</span><b>✦</b>
-        <span>DISCOVER</span><b>✦</b><span>LISTEN</span><b>✦</b><span>FEEL</span><b>✦</b>
-      </div>
-    </section>
-
-    <section class="section" id="discover">
-      <div class="section-heading reveal">
-        <div>
-          <p class="section-kicker">CURATED FOR YOU</p>
-          <h2>Sounds worth<br><span>pressing play on.</span></h2>
-        </div>
-        <p class="section-description">Pilihan musik yang menemani berbagai versi dirimu—dari pagi yang tenang sampai malam yang penuh cerita.</p>
-      </div>
-
-      <div class="playlist-grid">
-        <article class="playlist-card large reveal">
-          <div class="art art-one"><span>01</span><div class="sun"></div></div>
-          <div class="playlist-meta">
-            <div><p>MOOD</p><h3>Soft Morning</h3></div>
-            <button>▶</button>
-          </div>
-          <p class="muted">Indie pop · Acoustic · Dreamy</p>
-        </article>
-
-        <article class="playlist-card reveal">
-          <div class="art art-two"><span>02</span><div class="moon"></div></div>
-          <div class="playlist-meta">
-            <div><p>MOOD</p><h3>Late Night</h3></div>
-            <button>▶</button>
-          </div>
-          <p class="muted">R&B · Lo-fi · Alternative</p>
-        </article>
-
-        <article class="playlist-card reveal">
-          <div class="art art-three"><span>03</span><div class="spark"></div></div>
-          <div class="playlist-meta">
-            <div><p>ENERGY</p><h3>Good Energy</h3></div>
-            <button>▶</button>
-          </div>
-          <p class="muted">Pop · Dance · Feel good</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section genres-section" id="genres">
-      <div class="section-heading reveal">
-        <div>
-          <p class="section-kicker">EXPLORE YOUR SOUND</p>
-          <h2>One world,<br><span>many rhythms.</span></h2>
-        </div>
-      </div>
-      <div class="genre-list">
-        <a href="#" class="genre-pill reveal"><span>01</span> Pop <i>↗</i></a>
-        <a href="#" class="genre-pill reveal"><span>02</span> Indie <i>↗</i></a>
-        <a href="#" class="genre-pill reveal"><span>03</span> R&B <i>↗</i></a>
-        <a href="#" class="genre-pill reveal"><span>04</span> Jazz <i>↗</i></a>
-        <a href="#" class="genre-pill reveal"><span>05</span> Classical <i>↗</i></a>
-        <a href="#" class="genre-pill reveal"><span>06</span> Electronic <i>↗</i></a>
-      </div>
-    </section>
-
-    <section class="about-section" id="about">
-      <div class="about-art reveal">
-        <div class="sound-ring"></div>
-        <div class="about-letter">W</div>
-        <div class="floating-note note-one">♪</div>
-        <div class="floating-note note-two">♫</div>
-      </div>
-      <div class="about-copy reveal">
-        <p class="section-kicker">THE WIMUSIKAL IDEA</p>
-        <h2>Musik bukan cuma<br><span>untuk didengar.</span></h2>
-        <p>
-          Musik bisa menjadi memori, energi, tempat pulang, bahkan cara kita
-          memahami diri sendiri. Wimusikal dibuat sebagai ruang kecil untuk
-          merayakan semua hal itu.
-        </p>
-        <a class="primary-btn" href="#discover">Find Your Sound <span>→</span></a>
-      </div>
-    </section>
-
-    <section class="cta-section reveal">
-      <p class="section-kicker">YOUR NEXT FAVORITE SONG IS WAITING</p>
-      <h2>Turn the volume<br><span>up on life.</span></h2>
-      <a class="primary-btn" href="#home">Explore Wimusikal <span>↗</span></a>
-    </section>
-  </main>
-
-  <footer>
-    <div class="footer-brand">
-      <a class="brand" href="#home"><span class="brand-mark">W</span><span>Wimusikal</span></a>
-      <p>A little universe made of music.</p>
-    </div>
-    <div class="footer-bottom">
-      <span>© 2026 Wimusikal</span>
-      <span>Made with ♡ for music lovers</span>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
+<footer><div class="footer-brand"><a class="brand" href="#home"><span class="brand-mark">W</span><span>Wimusikal</span></a><p>A little universe made of music.</p></div><div class="footer-bottom"><span>© 2026 Wimusikal</span><span>Made with ♡ for music lovers</span></div></footer>
+<script src="script.js"></script>
 </body>
 </html>
