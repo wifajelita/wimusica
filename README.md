@@ -1,4 +1,4 @@
-# Wimusical
+# Wimusikal
 
 Landing page modern minimalis bertema musik dengan nuansa ungu muda dan magenta.
 
