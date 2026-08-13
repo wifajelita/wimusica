@@ -1,10 +1,15 @@
-# Wimusikal
+# Wimusikal — Teen Music
 
-Landing page modern minimalis bertema musik dengan nuansa ungu muda dan magenta.
+GitHub Pages-ready static website. Upload `index.html`, `style.css`, and `script.js` to the repository root.
 
-## Isi
-- `index.html` — struktur halaman
-- `style.css` — desain, responsive layout, animasi visual
-- `script.js` — scroll reveal, navbar, dan tombol player
+Features: responsive layout, real stock photography, music discovery cards, mood section, studio section, hover/3D effects, scroll reveal, magnetic buttons, and floating WhatsApp.
 
-Buka `index.html` di browser untuk melihat website.
+WhatsApp number: 081310937825
+Preset message: rekomendasi lagu yang bagus dong kak...
+
+Image source: Unsplash
+https://unsplash.com/license
+
+
+## Featured song
+The site includes an official Spotify embed for **Birds of a Feather — Billie Eilish**. The copyrighted audio is not packaged in the ZIP; playback is handled by Spotify.
