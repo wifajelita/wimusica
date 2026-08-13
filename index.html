@@ -10,9 +10,11 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+</div>
+
 <header class="navbar">
 <a class="brand" href="#home"><span class="brand-mark">W</span>Wimusikal</a>
-<nav><a href="#home">Home</a><a href="#songs">Songs</a><a href="#listen">Listen</a><a href="#moods">Moods</a><a href="#about">About</a></nav>
+<nav><a href="#home">Home</a><a href="#songs">Songs</a><a href="#player">Player</a><a href="#listen">Listen</a><a href="#moods">Moods</a><a href="#about">About</a></nav>
 <a class="nav-btn" href="#songs">Explore ↗</a>
 </header>
 
@@ -77,6 +79,62 @@
 
 <section class="cta reveal"><p class="kicker">CAN'T PICK A SONG?</p><h2>Ask Wimusikal.<br><span>Let's find your vibe.</span></h2>
 <a class="primary-btn magnetic" href="https://wa.me/6281310937825?text=rekomendasi%20lagu%20yang%20bagus%20dong%20kak..." target="_blank" rel="noopener">Chat di WhatsApp <b>↗</b></a></section>
+
+<section class="music-player-section" id="player">
+  <div class="player-heading reveal">
+    <div>
+      <p class="kicker">WIMUSIKAL PLAYER</p>
+      <h2>Pick a song.<br><span>Press play.</span></h2>
+    </div>
+    <p>Playlist instrumental bebas royalti untuk menemani kamu menjelajah Wimusikal.</p>
+  </div>
+
+  <div class="player-shell reveal">
+    <div class="now-playing">
+      <div class="cover-art" id="coverArt">♫</div>
+      <div class="now-text">
+        <small id="nowGenre">CHILL / INSTRUMENTAL</small>
+        <h3 id="nowTitle">Pilih lagu dari playlist</h3>
+        <p id="nowArtist">Wimusikal Radio</p>
+      </div>
+      <button class="player-heart" aria-label="Favorite">♡</button>
+    </div>
+
+    <div class="progress-wrap">
+      <input id="progress" type="range" min="0" max="100" value="0" aria-label="Progress lagu">
+      <div><span id="currentTime">0:00</span><span id="duration">0:00</span></div>
+    </div>
+
+    <div class="controls">
+      <button id="shuffleBtn" aria-label="Shuffle">⤨</button>
+      <button id="prevBtn" aria-label="Previous">◀◀</button>
+      <button class="main-play" id="mainPlay" aria-label="Play">▶</button>
+      <button id="nextBtn" aria-label="Next">▶▶</button>
+      <button id="muteBtn" aria-label="Mute">🔊</button>
+    </div>
+
+    <div class="volume-row">
+      <span>VOL</span><input id="volume" type="range" min="0" max="1" step=".01" value=".45">
+    </div>
+
+    <div class="track-list" id="trackList">
+      <button class="track active" data-index="0">
+        <span>01</span><span class="track-icon">♫</span><span><b>Moment of Peace</b><small>Calm · Piano</small></span><strong>2:32</strong>
+      </button>
+      <button class="track" data-index="1">
+        <span>02</span><span class="track-icon">♫</span><span><b>Cool Jazz Loops</b><small>Jazz · Lounge</small></span><strong>2:08</strong>
+      </button>
+      <button class="track" data-index="2">
+        <span>03</span><span class="track-icon">♫</span><span><b>Background Music</b><small>Acoustic · Chill</small></span><strong>2:23</strong>
+      </button>
+      <button class="track" data-index="3">
+        <span>04</span><span class="track-icon">♫</span><span><b>Dance Playful Night</b><small>Upbeat · Pop</small></span><strong>1:45</strong>
+      </button>
+    </div>
+    <p class="player-note">Audio di playlist ini menggunakan track bebas royalti dari koleksi musik Pixabay. Lisensi tetap perlu dicek pada halaman track sebelum penggunaan komersial. <a href="https://pixabay.com/music/" target="_blank" rel="noopener">Lihat koleksi Pixabay ↗</a></p>
+  </div>
+</section>
+
 </main>
 
 <a class="wa-float" href="https://wa.me/6281310937825?text=rekomendasi%20lagu%20yang%20bagus%20dong%20kak..." target="_blank" rel="noopener" aria-label="Chat WhatsApp">◔<i>Rekomendasi lagu? 💬</i></a>
