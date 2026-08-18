@@ -1,62 +1,96 @@
 <!doctype html>
 <html lang="id">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="Wimusikal — ruang musik modern untuk remaja. Temukan lagu, mood, dan playlist favoritmu.">
 <title>Wimusikal — Music for Your Mood</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="bg-orb orb-a"></div><div class="bg-orb orb-b"></div>
 <header class="navbar">
-<a class="brand" href="#home"><span class="brand-mark">W</span><span>Wimusikal</span></a>
-<nav class="nav-links" aria-label="Main navigation">
-<a href="#home">Home</a><a href="#songs">Songs</a><a href="#listen">Listen</a><a href="#moods">Moods</a><a href="#about">About</a>
-</nav><a class="nav-cta" href="#songs">Explore Music ↗</a>
+  <a class="brand" href="#home"><span class="brand-mark">W</span><span>Wimusikal</span></a>
+  <nav class="nav-links" aria-label="Main navigation">
+    <a href="#home">Home</a><a href="#songs">Songs</a><a href="#listen">Listen</a><a href="#moods">Moods</a><a href="#about">About</a>
+  </nav>
+  <a class="nav-cta" href="#songs">Explore Music ↗</a>
 </header>
 <main id="home">
 <section class="hero">
-<div class="hero-copy reveal"><p class="eyebrow"><i></i> YOUR DAILY MUSIC SPACE</p>
-<h1>Music for every<br><em>version</em> of you.</h1>
-<p class="hero-text">Temukan lagu yang pas buat belajar, jalan sore, ngobrol, atau sekadar menikmati waktu sendiri.</p>
-<div class="hero-actions"><a class="primary-btn" href="#songs">Find Your Song <span>→</span></a><a class="ghost-btn" href="#moods">Explore moods ↓</a></div>
-<div class="stats"><div><b>100+</b><small>Tracks</small></div><div><b>20+</b><small>Moods</small></div><div><b>24/7</b><small>Good vibes</small></div></div></div>
-<div class="hero-visual reveal"><div class="hero-photo"><img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=1100&q=85" alt="Teen music studio aesthetic"></div>
-<div class="floating-card"><span>♫</span><div><small>NOW VIBING</small><b>Make your moment sound better.</b></div></div></div>
+  <div class="hero-copy reveal">
+    <p class="eyebrow"><i></i> YOUR DAILY MUSIC SPACE</p>
+    <h1>Music for every<br><em>version</em> of you.</h1>
+    <p class="hero-text">Temukan lagu yang pas buat belajar, jalan sore, ngobrol, atau sekadar menikmati waktu sendiri.</p>
+    <div class="hero-actions"><a class="primary-btn" href="#songs">Find Your Song <span>→</span></a><a class="ghost-btn" href="#moods">Explore moods ↓</a></div>
+    <div class="stats"><div><b>100+</b><small>Tracks</small></div><div><b>20+</b><small>Moods</small></div><div><b>24/7</b><small>Good vibes</small></div></div>
+  </div>
+  <div class="hero-visual reveal delay"><div class="hero-photo"><img src="assets/collections/good-energy.svg" alt="Original Wimusikal music illustration"></div><div class="floating-card"><span>♫</span><div><small>NOW VIBING</small><b>Make your moment sound better.</b></div></div></div>
 </section>
+<section class="marquee" aria-label="Wimusikal values"><div class="marquee-track"><span>DISCOVER</span><b>✦</b><span>LISTEN</span><b>✦</b><span>FEEL</span><b>✦</b><span>DISCOVER</span><b>✦</b><span>LISTEN</span><b>✦</b><span>FEEL</span><b>✦</b><span>DISCOVER</span><b>✦</b><span>LISTEN</span><b>✦</b><span>FEEL</span><b>✦</b></div></section>
+<section class="collection-section" id="songs">
+  <div class="collection-glow glow-one"></div>
+  <div class="collection-glow glow-two"></div>
+  <div class="collection-inner">
+    <div class="collection-heading reveal">
+      <div class="collection-eyebrow"><span></span> LATEST COLLECTION <span></span></div>
+      <h2>Explore <em>the</em><br>collection.</h2>
+      <p class="collection-intro">Playlist pilihan untuk setiap suasana hati dan momen berharga.</p>
+    </div>
 
-<section class="marquee" aria-label="Wimusikal slogan"><div class="marquee-track">
-<div class="marquee-item">DISCOVER <b>✦</b> LISTEN <b>✦</b> FEEL <b>✦</b></div>
-<div class="marquee-item">DISCOVER <b>✦</b> LISTEN <b>✦</b> FEEL <b>✦</b></div>
-<div class="marquee-item">DISCOVER <b>✦</b> LISTEN <b>✦</b> FEEL <b>✦</b></div>
-<div class="marquee-item">DISCOVER <b>✦</b> LISTEN <b>✦</b> FEEL <b>✦</b></div>
-</div></section>
+    <div class="collection-grid">
+      <article class="collection-card reveal" data-track-card="0">
+        <div class="collection-art">
+          <img src="assets/collections/moment-of-peace.svg" alt="Ilustrasi original Moment of Peace">
+          <div class="art-shade"></div><span class="collection-number">01</span><span class="art-tag">CHILL</span>
+          <button class="collection-play song-play" data-track="0" aria-label="Play Moment of Peace">▶</button>
+        </div>
+        <div class="collection-info"><div><small>CHILL / PIANO</small><h3>Moment of Peace</h3><p>Wimusikal Sessions</p></div><span class="duration-chip">02:45</span></div>
+      </article>
 
-<section class="section" id="songs">
-<div class="section-head reveal"><div><p class="kicker">LATEST COLLECTION</p><h2>Songs you'll<br><span>want to replay.</span></h2></div>
-<p>Playlist pilihan untuk suasana remaja yang chill, dreamy, happy, dan sedikit nostalgic.</p></div>
-<div class="song-grid">
-<article class="song-card"><div class="cover cover-one"><span>01</span><div>☾</div></div><div class="song-meta"><div><small>CHILL / PIANO</small><h3>Moment of Peace</h3><p>MickeysCatMickeysCat</p></div><button class="song-play" data-track="0" aria-label="Play Moment of Peace">▶</button></div></article>
-<article class="song-card"><div class="cover cover-two"><span>02</span><div>✦</div></div><div class="song-meta"><div><small>JAZZ / LOUNGE</small><h3>Cool Jazz Loops</h3><p>JuliusH</p></div><button class="song-play" data-track="1" aria-label="Play Cool Jazz Loops">▶</button></div></article>
-<article class="song-card"><div class="cover cover-three"><span>03</span><div>♫</div></div><div class="song-meta"><div><small>ACOUSTIC / CHILL</small><h3>Soft Afternoon</h3><p>Wimusikal Sessions</p></div><button class="song-play" data-track="2" aria-label="Play Soft Afternoon">▶</button></div></article>
-<article class="song-card"><div class="cover cover-four"><span>04</span><div>♬</div></div><div class="song-meta"><div><small>UPBEAT / POP</small><h3>Good Energy</h3><p>Wimusikal Sessions</p></div><button class="song-play" data-track="3" aria-label="Play Good Energy">▶</button></div></article>
-</div></section>
+      <article class="collection-card reveal" data-track-card="1">
+        <div class="collection-art">
+          <img src="assets/collections/cool-jazz-loops.svg" alt="Ilustrasi original Cool Jazz Loops">
+          <div class="art-shade"></div><span class="collection-number">02</span><span class="art-tag">JAZZ</span>
+          <button class="collection-play song-play" data-track="1" aria-label="Play Cool Jazz Loops">▶</button>
+        </div>
+        <div class="collection-info"><div><small>JAZZ / LOUNGE</small><h3>Cool Jazz Loops</h3><p>Wimusikal Sessions</p></div><span class="duration-chip">03:12</span></div>
+      </article>
 
-<section class="listen-section" id="listen"><div class="section-head reveal"><div><p class="kicker">WIMUSIKAL PLAYER</p><h2>Press play.<br><span>Stay awhile.</span></h2></div></div>
-<div class="player reveal"><div class="player-top"><div class="player-cover" id="playerCover">♫</div><div><small id="playerGenre">CHILL / PIANO</small><h3 id="playerTitle">Moment of Peace</h3><p id="playerArtist">MickeysCatMickeysCat</p></div><button id="muteBtn" aria-label="Mute">🔊</button></div>
-<input class="progress" id="progress" type="range" min="0" max="100" value="0"><div class="times"><span id="current">0:00</span><span id="duration">0:00</span></div>
-<div class="controls"><button id="prev" aria-label="Previous">◀◀</button><button class="big-play" id="mainPlay" aria-label="Play">▶</button><button id="next" aria-label="Next">▶▶</button></div>
-<div class="volume"><span>VOL</span><input id="volume" type="range" min="0" max="1" step=".01" value=".45"></div></div></section>
+      <article class="collection-card reveal" data-track-card="2">
+        <div class="collection-art">
+          <img src="assets/collections/soft-afternoon.svg" alt="Ilustrasi original Soft Afternoon">
+          <div class="art-shade"></div><span class="collection-number">03</span><span class="art-tag">ACOUSTIC</span>
+          <button class="collection-play song-play" data-track="2" aria-label="Play Soft Afternoon">▶</button>
+        </div>
+        <div class="collection-info"><div><small>ACOUSTIC / CHILL</small><h3>Soft Afternoon</h3><p>Wimusikal Sessions</p></div><span class="duration-chip">02:58</span></div>
+      </article>
 
-<section class="section moods" id="moods"><div class="section-head reveal"><div><p class="kicker">CHOOSE YOUR MOOD</p><h2>What's your<br><span>vibe today?</span></h2></div></div>
-<div class="mood-grid"><a href="#songs">☁️ <b>Chill</b><small>slow & soft</small></a><a href="#songs">🌙 <b>Late Night</b><small>dreamy sounds</small></a><a href="#songs">☀️ <b>Good Energy</b><small>feel good</small></a><a href="#songs">🌊 <b>Focus</b><small>study mode</small></a></div></section>
+      <article class="collection-card reveal" data-track-card="3">
+        <div class="collection-art">
+          <img src="assets/collections/good-energy.svg" alt="Ilustrasi original Good Energy">
+          <div class="art-shade"></div><span class="collection-number">04</span><span class="art-tag">UPBEAT</span>
+          <button class="collection-play song-play" data-track="3" aria-label="Play Good Energy">▶</button>
+        </div>
+        <div class="collection-info"><div><small>UPBEAT / POP</small><h3>Good Energy</h3><p>Wimusikal Sessions</p></div><span class="duration-chip">02:37</span></div>
+      </article>
+    </div>
 
-<section class="about" id="about"><div class="about-photo reveal"><img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=1000&q=85" alt="Music listening"></div>
-<div class="about-copy reveal"><p class="kicker">THE WIMUSIKAL IDEA</p><h2>Music is more than<br><span>just a sound.</span></h2><p>Wimusikal adalah ruang kecil untuk menemukan lagu, mood, dan cerita yang terasa dekat dengan kehidupan sehari-hari.</p><a class="primary-btn" href="#songs">Explore the collection <span>→</span></a></div></section>
+    <div class="collection-bottom reveal">
+      <span>04 curated sounds · made for your mood</span>
+      <a href="#listen">Open the player <b>↗</b></a>
+    </div>
+  </div>
+</section>
+<section class="listen-section section" id="listen"><div class="listen-heading reveal"><p class="kicker">WIMUSIKAL PLAYER</p><h2>Press play.<br><span>Stay awhile.</span></h2></div><div class="player reveal"><div class="player-top"><div class="player-cover" id="playerCover">♫</div><div><small id="playerGenre">CHILL / PIANO</small><h3 id="playerTitle">Moment of Peace</h3><p id="playerArtist">Wimusikal Sessions</p></div><button id="muteBtn" aria-label="Mute">🔊</button></div><input class="progress" id="progress" type="range" min="0" max="100" value="0"><div class="times"><span id="current">0:00</span><span id="duration">0:00</span></div><div class="controls"><button id="prev">◀◀</button><button class="big-play" id="mainPlay">▶</button><button id="next">▶▶</button></div><div class="volume"><span>VOL</span><input id="volume" type="range" min="0" max="1" step=".01" value=".45"></div></div></section>
+<section class="section moods" id="moods"><div class="section-head reveal"><div><p class="kicker">CHOOSE YOUR MOOD</p><h2>What's your<br><span>vibe today?</span></h2></div></div><div class="mood-grid"><a href="#songs">☁️ <b>Chill</b><small>slow & soft</small></a><a href="#songs">🌙 <b>Late Night</b><small>dreamy sounds</small></a><a href="#songs">☀️ <b>Good Energy</b><small>feel good</small></a><a href="#songs">🌊 <b>Focus</b><small>study mode</small></a></div></section>
+<section class="about" id="about"><div class="about-photo reveal"><img src="assets/collections/soft-afternoon.svg" alt="Original acoustic music illustration"></div><div class="about-copy reveal"><p class="kicker">THE WIMUSIKAL IDEA</p><h2>Music is more than<br><span>just a sound.</span></h2><p>Wimusikal adalah ruang kecil untuk menemukan lagu, mood, dan cerita yang terasa dekat dengan kehidupan sehari-hari.</p><a class="primary-btn" href="#songs">Explore the collection <span>→</span></a></div></section>
 </main>
 <footer><div><a class="brand" href="#home"><span class="brand-mark">W</span><span>Wimusikal</span></a><p>A little universe made of music.</p></div><span>© 2026 Wimusikal</span></footer>
-<div class="mini-player" id="miniPlayer"><span id="miniIcon">♫</span><div><b id="miniTitle">Moment of Peace</b><small id="miniStatus">Ready to play</small></div><button id="miniPlay" aria-label="Play">▶</button></div>
+<div class="mini-player" id="miniPlayer"><span id="miniIcon">♫</span><div><b id="miniTitle">Moment of Peace</b><small id="miniStatus">Ready to play</small></div><button id="miniPlay">▶</button></div>
 <script src="script.js"></script>
-</body></html>
+</body>
+</html>
