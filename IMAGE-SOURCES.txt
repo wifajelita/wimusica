@@ -1,8 +1,1 @@
-Wimusikal real-photo artwork
-
-Photos are hotlinked from Unsplash image CDN and are used under the Unsplash License.
-Sources:
-- https://unsplash.com/
-- https://unsplash.com/photos/ (photo pages corresponding to the image IDs used)
-
-The website includes onerror fallbacks so a failed remote image does not show a broken-image icon.
+Images use Unsplash CDN hotlinks. Unsplash states its photos are free to use for most personal/commercial projects; attribution is not required, though appreciated. Check the Unsplash license/terms for specific use cases.

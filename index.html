@@ -2,22 +2,88 @@
 <html lang="id">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Wimusikal — Floating Playlist</title>
-<meta name="description" content="Wimusikal — playlist musik remaja dengan album cards dan continuous player.">
+<meta name="description" content="Wimusikal — modern music space for young listeners.">
+<title>Wimusikal — Music for Your Mood</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="navbar"><a class="brand" href="#home"><span class="brand-mark">W</span> Wimusikal</a><nav><a href="#home">Home</a><a href="#playlist">Playlist</a><a href="#player">Listen</a><a href="#about">About</a></nav><a class="nav-btn" href="#playlist">Explore ↗</a></header>
+<header class="navbar" id="navbar">
+  <a class="brand" href="#home"><span class="brand-mark">W</span><span>Wimusikal</span></a>
+  <nav class="nav-links">
+    <a href="#home" data-i18n="home">Home</a><a href="#songs" data-i18n="songs">Songs</a>
+    <a href="#genres" data-i18n="genres">Genres</a><a href="#map" data-i18n="map">Music Map</a>
+    <a href="#about" data-i18n="about">About</a>
+  </nav>
+  <div class="nav-tools"><button id="lang">ID / EN</button><button id="searchOpen">⌕</button><a class="nav-cta" href="#songs">Explore Music ↗</a></div>
+</header>
+
+<div class="search-panel" id="searchPanel">
+  <div class="search-box"><span>⌕</span><input id="search" type="search" placeholder="Cari lagu, genre, mood..."><button id="searchClose">×</button></div>
+  <div id="results"></div>
+</div>
+
 <main id="home">
-<section class="hero container"><div class="hero-copy"><p class="eyebrow">WIMUSIKAL • TEEN MUSIC SPACE</p><h1>Your mood.<br><em>Your playlist.</em></h1><p>Album cards yang bisa kamu pilih satu per satu. Tekan play dan playlist akan lanjut otomatis ke lagu berikutnya.</p><div class="actions"><a class="primary" href="#playlist">Explore Playlist <span>→</span></a><a class="secondary" href="#player">Open Player ↓</a></div></div><div class="hero-stack" aria-label="Preview playlist"><div class="stack-card back">03</div><div class="stack-card mid">02</div><div class="stack-card front"><span>NOW VIBING</span><strong>Dreamy<br>Afternoon</strong><small>Wimusikal Sessions</small><button class="hero-play" data-play="2">▶</button></div></div></section>
-<div class="marquee"><div>DISCOVER ✦ LISTEN ✦ FEEL ✦ DISCOVER ✦ LISTEN ✦ FEEL ✦</div></div>
-<section class="playlist-section container" id="playlist"><div class="section-head"><div><p class="kicker">LATEST COLLECTION</p><h2>Pick a track.<br><span>Keep the vibes going.</span></h2></div><p>Cards disusun berurutan supaya musik bisa berjalan terus tanpa harus memilih lagu lagi.</p></div>
-<div class="playlist-row">
-<article class="album-card active" data-index="0"><div class="album-art art-1"><img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=900&q=85" alt="Remaja menikmati musik dengan headphone" loading="lazy" onerror="this.style.display='none'"><span>01</span><div>☾</div></div><div class="album-info"><small>CHILL • PIANO</small><h3>Moonlit Steps</h3><p>Wimusikal Sessions</p></div><button class="card-play" data-play="0">▶</button></article>
-<article class="album-card" data-index="1"><div class="album-art art-2"><img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=900&q=85" alt="Suasana studio musik dan alat musik" loading="lazy" onerror="this.style.display='none'"><span>02</span><div>✦</div></div><div class="album-info"><small>LO-FI • DREAMY</small><h3>Cloudy Notes</h3><p>Wimusikal Sessions</p></div><button class="card-play" data-play="1">▶</button></article>
-<article class="album-card" data-index="2"><div class="album-art art-3"><img src="https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?auto=format&fit=crop&w=900&q=85" alt="Penampilan musik dengan suasana konser" loading="lazy" onerror="this.style.display='none'"><span>03</span><div>♫</div></div><div class="album-info"><small>ACOUSTIC • CHILL</small><h3>Dreamy Afternoon</h3><p>Wimusikal Sessions</p></div><button class="card-play" data-play="2">▶</button></article>
-<article class="album-card" data-index="3"><div class="album-art art-4"><img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=900&q=85" alt="Konser musik dengan energi positif" loading="lazy" onerror="this.style.display='none'"><span>04</span><div>✧</div></div><div class="album-info"><small>UPBEAT • POP</small><h3>Good Energy</h3><p>Wimusikal Sessions</p></div><button class="card-play" data-play="3">▶</button></article>
+<section class="hero container">
+  <div class="hero-copy reveal"><p class="eyebrow">● YOUR DAILY MUSIC SPACE</p>
+    <h1>Music for every<br><em>version</em> of you.</h1>
+    <p class="hero-text" data-i18n="hero">Temukan lagu yang pas buat belajar, jalan sore, ngobrol, atau menikmati waktu sendiri.</p>
+    <div class="actions"><a class="primary" href="#songs">Find Your Song →</a><a href="#map">Explore moods ↓</a></div>
+    <div class="stats"><div><b>100+</b><small>Tracks</small></div><div><b>20+</b><small>Moods</small></div><div><b>40+</b><small>Genres</small></div></div>
+  </div>
+  <div class="hero-visual reveal">
+    <div class="hero-photo"><img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=1200&q=85" alt="Music listener"></div>
+    <div class="float-card">♫ <span>NOW VIBING<br><b>Make your moment sound better.</b></span></div>
+    <div class="chip chip-a">✦ Dreamy</div><div class="chip chip-b">♪ Chill</div>
+  </div>
+</section>
+
+<div class="marquee"><div class="marquee-track"><span>DISCOVER</span>✦<span>LISTEN</span>✦<span>FEEL</span>✦<span>DISCOVER</span>✦<span>LISTEN</span>✦<span>FEEL</span>✦<span>DISCOVER</span>✦<span>LISTEN</span>✦<span>FEEL</span>✦</div></div>
+
+<section class="section container" id="songs">
+<div class="section-head"><div><p class="kicker">LATEST COLLECTION</p><h2>Songs you'll<br><span>want to replay.</span></h2></div><p data-i18n="collection">Playlist untuk suasana chill, dreamy, happy, dan sedikit nostalgic.</p></div>
+<div class="song-grid" id="songGrid">
+  <article class="song-card" data-search="moment of peace chill piano"><div class="cover"><img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=900&q=85" alt="Singer"></div><div class="song-meta"><div><small>CHILL / PIANO</small><h3>Moment of Peace</h3><p>Wimusikal Sessions</p></div><button class="play">▶</button></div></article>
+  <article class="song-card" data-search="cool jazz loops jazz lounge"><div class="cover"><img src="https://images.unsplash.com/photo-1511192336575-5a79af67a629?auto=format&fit=crop&w=900&q=85" alt="Jazz musician"></div><div class="song-meta"><div><small>JAZZ / LOUNGE</small><h3>Cool Jazz Loops</h3><p>Wimusikal Sessions</p></div><button class="play">▶</button></div></article>
+  <article class="song-card" data-search="soft afternoon acoustic chill"><div class="cover"><img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=900&q=85" alt="Music studio"></div><div class="song-meta"><div><small>ACOUSTIC / CHILL</small><h3>Soft Afternoon</h3><p>Wimusikal Sessions</p></div><button class="play">▶</button></div></article>
+  <article class="song-card" data-search="good energy pop upbeat"><div class="cover"><img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=900&q=85" alt="Concert"></div><div class="song-meta"><div><small>UPBEAT / POP</small><h3>Good Energy</h3><p>Wimusikal Sessions</p></div><button class="play">▶</button></div></article>
+  <article class="song-card" data-search="midnight drive r&b night"><div class="cover"><img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=900&q=85" alt="Night concert"></div><div class="song-meta"><div><small>R&B / NIGHT</small><h3>Midnight Drive</h3><p>Wimusikal Sessions</p></div><button class="play">▶</button></div></article>
+  <article class="song-card" data-search="sunday acoustic indie"><div class="cover"><img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?auto=format&fit=crop&w=900&q=85" alt="Live performance"></div><div class="song-meta"><div><small>INDIE / ACOUSTIC</small><h3>Sunday Acoustic</h3><p>Wimusikal Sessions</p></div><button class="play">▶</button></div></article>
+</div>
+</section>
+
+<section class="section container" id="genres">
+<div class="section-head"><div><p class="kicker">EXPLORE YOUR SOUND</p><h2>One world,<br><span>many rhythms.</span></h2></div></div>
+<div class="genre-grid">
+<a href="#songs">01 <b>Pop</b><small>Bright & catchy ↗</small></a><a href="#songs">02 <b>Indie</b><small>Fresh discoveries ↗</small></a>
+<a href="#songs">03 <b>R&B</b><small>Warm grooves ↗</small></a><a href="#songs">04 <b>Jazz</b><small>Late-night mood ↗</small></a>
+<a href="#songs">05 <b>Acoustic</b><small>Soft & intimate ↗</small></a><a href="#songs">06 <b>Electronic</b><small>Future sounds ↗</small></a>
+<a href="#songs">07 <b>Classical</b><small>Timeless pieces ↗</small></a><a href="#songs">08 <b>Lo-fi</b><small>Focus & relax ↗</small></a>
 </div></section>
-<section class="player-section container" id="player"><div class="player"><div class="player-art" id="playerArt"><span>01</span></div><div class="player-info"><p class="kicker">NOW PLAYING</p><h2 id="title">Moonlit Steps</h2><p id="artist">Wimusikal Sessions</p><div class="progress-wrap"><input id="progress" type="range" min="0" max="100" value="0"><div class="times"><span id="current">0:00</span><span id="duration">0:00</span></div></div><div class="controls"><button id="prev">◀◀</button><button class="main-play" id="mainPlay">▶</button><button id="next">▶▶</button></div><label>VOL <input id="volume" type="range" min="0" max="1" step=".01" value=".55"></label></div></div><audio id="audio" preload="metadata"></audio></section>
-<section class="about container" id="about"><p class="kicker">THE WIMUSIKAL IDEA</p><h2>One playlist.<br><span>Four little worlds.</span></h2><p>Artwork playlist menggunakan foto stok nyata dari Unsplash. Jika koneksi gambar eksternal gagal, card tetap menampilkan background fallback sehingga tidak muncul ikon broken image.</p></section>
-</main><footer class="container"><span>© 2026 Wimusikal</span><span>Made for music lovers ♡</span></footer><script src="script.js"></script></body></html>
+
+<section class="section map-section" id="map"><div class="container">
+<div class="section-head"><div><p class="kicker">THE MUSIC MAP</p><h2>Find your sound<br><span>by feeling.</span></h2></div><p>Peta interaktif sederhana untuk menghubungkan mood dengan karakter musik.</p></div>
+<div class="music-map"><div class="map-center">♫<small>WIMUSIKAL<br>SOUND MAP</small></div>
+<button class="node n1">☁️<b>Chill</b><small>soft · slow</small></button><button class="node n2">☀️<b>Happy</b><small>bright · upbeat</small></button>
+<button class="node n3">🌙<b>Night</b><small>dreamy · deep</small></button><button class="node n4">🌊<b>Focus</b><small>calm · clear</small></button></div>
+</div></section>
+
+<section class="section container" id="about"><div class="about-grid">
+<div class="about-photo"><img src="https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?auto=format&fit=crop&w=1100&q=85" alt="Live music"></div>
+<div><p class="kicker">THE WIMUSIKAL IDEA</p><h2>Music is more than<br><span>just a sound.</span></h2>
+<p class="about-text" data-i18n="about">Wimusikal adalah ruang kecil untuk menemukan lagu, mood, dan cerita yang terasa dekat dengan kehidupan sehari-hari.</p>
+<div class="facts"><div><b>01</b><p>Musik dapat menjadi “mesin waktu” karena otak menghubungkan suara dengan kenangan dan emosi.</p></div>
+<div><b>02</b><p>Ritme berulang membuat kita lebih mudah mengenali dan mengantisipasi bagian musik berikutnya.</p></div>
+<div><b>03</b><p>Urutan playlist bisa membentuk perjalanan suasana dari lagu pertama sampai lagu terakhir.</p></div></div>
+</div></div></section>
+
+<section class="cta container"><p class="kicker">YOUR NEXT FAVORITE SONG IS WAITING</p><h2>Turn the volume<br><span>up on life.</span></h2><a class="primary" href="#songs">Explore Wimusikal ↗</a></section>
+</main>
+
+<footer><div class="container footer"><div><a class="brand" href="#home"><span class="brand-mark">W</span><span>Wimusikal</span></a><p>A little universe made of music.</p></div><div class="footer-links"><a href="#songs">Songs</a><a href="#genres">Genres</a><a href="#map">Music Map</a><a href="#about">About</a></div><span>© 2026 Wimusikal</span></div></footer>
+
+<a class="wa" href="https://wa.me/6281310937825?text=Rekomendasi%20lagu%20yang%20bagus%20dong%20kak...." target="_blank" rel="noopener noreferrer" aria-label="Chat WhatsApp Wimusikal"><strong>◉</strong><span>Chat Wimusikal</span></a>
+<script src="script.js"></script>
+</body></html>

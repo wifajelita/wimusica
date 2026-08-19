@@ -1,11 +1,13 @@
-const tracks=[
- {title:'Moonlit Steps',artist:'Wimusikal Sessions',file:'assets/audio/moonlit-steps.wav',art:'art-1'},
- {title:'Cloudy Notes',artist:'Wimusikal Sessions',file:'assets/audio/cloudy-notes.wav',art:'art-2'},
- {title:'Dreamy Afternoon',artist:'Wimusikal Sessions',file:'assets/audio/dreamy-afternoon.wav',art:'art-3'},
- {title:'Good Energy',artist:'Wimusikal Sessions',file:'assets/audio/good-energy.wav',art:'art-4'}
-];
-const audio=document.querySelector('#audio'), title=document.querySelector('#title'),artist=document.querySelector('#artist'),progress=document.querySelector('#progress'),current=document.querySelector('#current'),duration=document.querySelector('#duration'),mainPlay=document.querySelector('#mainPlay'),playerArt=document.querySelector('#playerArt'),volume=document.querySelector('#volume');let index=0;
-function fmt(s){if(!Number.isFinite(s))return'0:00';return `${Math.floor(s/60)}:${String(Math.floor(s%60)).padStart(2,'0')}`}
-function load(i,autoplay=false){index=(i+tracks.length)%tracks.length;const t=tracks[index];audio.src=t.file;title.textContent=t.title;artist.textContent=t.artist;playerArt.className=`player-art ${t.art}`;document.querySelectorAll('.album-card').forEach((c,n)=>c.classList.toggle('active',n===index));document.querySelectorAll('.card-play').forEach((b,n)=>b.textContent=n===index&& !audio.paused?'❚❚':'▶');if(autoplay)audio.play().catch(()=>{});}
-function toggle(){if(audio.paused){audio.play().catch(()=>{});mainPlay.textContent='❚❚'}else{audio.pause();mainPlay.textContent='▶'}document.querySelectorAll('.card-play').forEach((b,n)=>b.textContent=n===index&&!audio.paused?'❚❚':'▶')}
-document.querySelectorAll('[data-play]').forEach(b=>b.addEventListener('click',()=>{load(Number(b.dataset.play));toggle();document.querySelector('#player').scrollIntoView({behavior:'smooth',block:'center'})}));mainPlay.addEventListener('click',toggle);document.querySelector('#next').addEventListener('click',()=>load(index+1,true));document.querySelector('#prev').addEventListener('click',()=>load(index-1,true));audio.addEventListener('ended',()=>load(index+1,true));audio.addEventListener('loadedmetadata',()=>{duration.textContent=fmt(audio.duration)});audio.addEventListener('timeupdate',()=>{current.textContent=fmt(audio.currentTime);progress.value=audio.duration?(audio.currentTime/audio.duration*100):0});progress.addEventListener('input',()=>{if(audio.duration)audio.currentTime=progress.value/100*audio.duration});volume.addEventListener('input',()=>audio.volume=volume.value);audio.volume=.55;load(0);
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const nav=$('#navbar');addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>18),{passive:true});
+const panel=$('#searchPanel'),input=$('#search'),results=$('#results');
+$('#searchOpen').onclick=()=>{panel.classList.add('open');setTimeout(()=>input.focus(),50)};
+$('#searchClose').onclick=()=>panel.classList.remove('open');
+document.addEventListener('keydown',e=>{if(e.key==='Escape')panel.classList.remove('open')});
+const cards=$$('.song-card');
+function search(q=''){q=q.toLowerCase().trim();const m=cards.filter(c=>!q||c.dataset.search.includes(q));results.innerHTML=m.length?m.map(c=>`<a class="result" href="#songs"><b>${c.querySelector('h3').textContent}</b><small>${c.querySelector('small').textContent}</small></a>`).join(''):'<div class="result">Tidak ditemukan.</div>'}
+input.oninput=e=>search(e.target.value);search();
+$$('.play').forEach(b=>b.onclick=()=>{const c=b.closest('.song-card');b.textContent='❚❚';setTimeout(()=>b.textContent='▶',900);});
+const tr={id:{home:'Beranda',songs:'Lagu',genres:'Genre',map:'Peta Musik',about:'Tentang',hero:'Temukan lagu yang pas buat belajar, jalan sore, ngobrol, atau menikmati waktu sendiri.',collection:'Playlist untuk suasana chill, dreamy, happy, dan sedikit nostalgic.',about:'Wimusikal adalah ruang kecil untuk menemukan lagu, mood, dan cerita yang terasa dekat dengan kehidupan sehari-hari.'},en:{home:'Home',songs:'Songs',genres:'Genres',map:'Music Map',about:'About',hero:'Find songs for studying, afternoon walks, hanging out, or enjoying your own time.',collection:'Curated playlists for chill, dreamy, happy, and slightly nostalgic moments.',about:'Wimusikal is a little space to discover songs, moods, and stories close to everyday life.'}};
+let lang=localStorage.getItem('wimusikal-lang')||'id';function apply(){const t=tr[lang];$$('[data-i18n]').forEach(e=>e.textContent=t[e.dataset.i18n]);$('#lang').textContent=lang==='id'?'ID / EN':'EN / ID'}$('#lang').onclick=()=>{lang=lang==='id'?'en':'id';localStorage.setItem('wimusikal-lang',lang);apply()};apply();
+$$('img').forEach(img=>img.onerror=()=>{img.style.opacity='0';img.parentElement.style.background='radial-gradient(circle at 30% 20%,rgba(180,140,255,.5),transparent 35%),linear-gradient(135deg,#2a173b,#11101c)'});
